@@ -1,6 +1,6 @@
 import Formulario from "./Formulario";
 import useCotizador from "../hooks/useCotizador";
-import Spiner from "./spiner";
+import Spiner from "./Spiner";
 import Resultado from "./Resultado";
 
 function AppSeguro() {
