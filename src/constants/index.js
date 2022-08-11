@@ -1,14 +1,14 @@
 export const MARCAS = [{
         id: 1,
-        nombre: 'europeo'
+        nombre: 'Europeo'
     },
     {
         id: 2,
-        nombre: 'americano'
+        nombre: 'Americano'
     },
     {
         id: 3,
-        nombre: 'asiatico'
+        nombre: 'Asiatico'
     }
 ]
 

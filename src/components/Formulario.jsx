@@ -1,28 +1,34 @@
 import { Fragment } from "react";
 import { MARCAS, YEARS, PLANES } from "../constants/";
 import useCotizador from "../hooks/useCotizador";
+import Error from "./Error";
 
 function Formulario() {
 
-  const { handlerChangeDatos, datos, error, setError  } = useCotizador();
+  const { handlerChangeDatos, datos, error, setError,cotizarSeguros  } = useCotizador();
 
   const handlerSubmit = (e) => {
     e.preventDefault();
     
     if(Object.values(datos).includes("")) {
-      console.log("faltan datos");
-     setError("faltan datos para cotizar");
-     console.log(error)
+     
+     setError("Todos los campos son obligatorios");
+   
       return;
       
     }
 
-    else {console.log("datos completos")}
+    
+    // re inicio error     
+    setError("");
+    cotizarSeguros()
   }
   
 
   return (
     <>
+
+    {error ? <Error/> : null}
       <form onSubmit={handlerSubmit}>
         <div className="my-5">
           <label className="block mb-3 font-bold text-gray-500 uppercase">
